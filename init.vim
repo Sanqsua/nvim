@@ -62,4 +62,4 @@ nnoremap <Leader>w :cw <CR>
 
 nnoremap <Leader>ct <C-]>
 
-tnoremap <Leader>ü <c-\><c-n>
+tnoremap <C-w> <C-\><C-n><C-w> 
