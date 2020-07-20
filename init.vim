@@ -10,8 +10,9 @@ let mapleader =" "
 call plug#begin('~/.vim/plugged')
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
 
 "--------------------------------------------------------------------------------------------------
 "general things
@@ -24,7 +25,7 @@ set autoread
 set shiftwidth=2	"tabswidth = 2
 set smarttab		"autoindents if tabs are used previously
 set tabstop=2
-set nu rnu
+set nu 
 set path=.,,,**
 set grepprg=rg\ -S\ --vimgrep 
 command! -nargs=+ -complete=dir -bar SearchProject execute 'silent! grep!'.<q-args>.' | cwindow'
