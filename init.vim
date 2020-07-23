@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf' 
 call plug#end()
 
 
@@ -38,7 +38,8 @@ let g:netrw_liststyle = 3 	"treestyle
 
 
 "--------------------------------------------------------------------------------------------------- 
-"shortcuts + leader ---------------------------------------------------------------------------------------------------
+"shortcuts 
+"---------------------------------------------------------------------------------------------------
 
 "open nettree in current directory
 nnoremap <Leader>d ( :25vs . <return> )
@@ -46,8 +47,6 @@ nnoremap <Leader>d ( :25vs . <return> )
 "substitute
 nnoremap <Leader>s  :%s//gc<Left><Left><Left>
 
-"f d for esc
-inoremap fd <Esc>
 
 "find file
 nnoremap <Leader>f :find 
@@ -69,6 +68,11 @@ tnoremap <C-w> <C-\><C-n><C-w>
 
 nnoremap <Leader>ö :FZF<return>
 nnoremap <Leader>ä :term<return>:vsp<return>
+
+"f d for esc
+inoremap qq <Esc>
+
+inoremap <M-a> <C-o>A
 
 "--------------------------------------------------------------------------------------------------- 
 " config for plugins
