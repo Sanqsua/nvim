@@ -1,3 +1,9 @@
+"---------------------------------------------------------------------------------------------------
+"leaderkey (space)
+"---------------------------------------------------------------------------------------------------
+
+let mapleader =" "
+
 "--------------------------------------------------------------------------------------------------- 
 "shortcuts in normal mode
 "---------------------------------------------------------------------------------------------------
@@ -13,7 +19,7 @@ nnoremap <Leader>ff :find
 
 nnoremap <Leader>fs :w
 "source this file
-nnoremap <Leader>f% (:source % <return>)
+nnoremap <Leader>f5 (:source % <return>)
 
 "change directory to current file
 nnoremap <Leader>cd	:cd %:h <return> 
@@ -29,10 +35,7 @@ nnoremap <Leader>fz :Files<Return>
 "shortcuts in insert mode
 "---------------------------------------------------------------------------------------------------
 
-"capslock as escape
-au VimEnter * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-au VimLeave * :silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
-
+inoremap jj <Esc>
 inoremap <M-a> <C-o>A
 
 "remap german ae oe ue keys
@@ -55,3 +58,4 @@ tnoremap <C-w> <C-\><C-n><C-w>
 "---------------------------------------------------------------------------------------------------
 cnoremap Ö /
 cnoremap Ä \
+

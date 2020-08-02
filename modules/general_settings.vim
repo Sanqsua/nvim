@@ -1,7 +1,7 @@
 "--------------------------------------------------------------------------------------------------
 "general things
 "---------------------------------------------------------------------------------------------------
-colorscheme ron
+colorscheme murphy
 syntax on set encoding=UTF-8
 set wildmenu
 set wildignore=*/target/*,*/node_modules/*,*.lock 
