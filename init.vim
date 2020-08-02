@@ -1,3 +1,4 @@
+"THIS CONFIGURATION IS FOR GERMAN KEYBOARD LAYOUTS
 "---------------------------------------------------------------------------------------------------
 "leaderkey (space)
 "---------------------------------------------------------------------------------------------------
@@ -47,7 +48,6 @@ nnoremap <Leader>d ( :25vs . <return> )
 "substitute
 nnoremap <Leader>s  :%s//gc<Left><Left><Left>
 
-
 "find file
 nnoremap <Leader>ff :find 
 
@@ -67,8 +67,7 @@ nnoremap <Leader>w :cw <return>
 nnoremap <Leader>ct <C-]>
 
 
-nnoremap <Leader>ö :FZF --preview<return> 
-nnoremap <Leader>ä :term<return>:vsp<return>
+nnoremap <Leader>fz :FZF --preview<return> 
 
 "--------------------------------------------------------------------------------------------------- 
 "shortcuts in insert mode
@@ -81,8 +80,8 @@ inoremap <M-a> <C-o>A
 inoremap ä ()<Left>
 inoremap ö {}<Left><Return><C-o>O
 inoremap ü []<Left>
-inoremap Ö \
-
+inoremap Ö /
+inoremap Ä \
 "--------------------------------------------------------------------------------------------------- 
 "shortcuts in terminal mode
 "---------------------------------------------------------------------------------------------------
@@ -92,4 +91,3 @@ tnoremap <C-w> <C-\><C-n><C-w>
 " config for plugins
 "--------------------------------------- ------------------------------------------------------------
 let g:fzf_preview_window = 'right:60%'
-
