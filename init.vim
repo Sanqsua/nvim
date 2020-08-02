@@ -37,7 +37,6 @@ let g:netrw_banner = 0
 
 let g:netrw_liststyle = 3 	"treestyle
 
-
 "--------------------------------------------------------------------------------------------------- 
 "shortcuts in normal mode
 "---------------------------------------------------------------------------------------------------
@@ -62,29 +61,28 @@ nnoremap <Leader>g :grep!
 nnoremap <Leader>w :cw <return>
 
 "ctags if needed
-
-
 nnoremap <Leader>ct <C-]>
-
 
 nnoremap <Leader>fz :FZF --preview<return> 
 
 "--------------------------------------------------------------------------------------------------- 
 "shortcuts in insert mode
 "---------------------------------------------------------------------------------------------------
-"f d for esc
-inoremap qq <Esc>
-
+"qq  for esc
+inoremap qq <Esc> 
 inoremap <M-a> <C-o>A
 
+"remap german ae oe ue keys
 inoremap ä ()<Left>
 inoremap ö {}<Left><Return><C-o>O
 inoremap ü []<Left>
 inoremap Ö /
 inoremap Ä \
+inoremap Ü <C-o>A;
 "--------------------------------------------------------------------------------------------------- 
 "shortcuts in terminal mode
 "---------------------------------------------------------------------------------------------------
+"switch terminal windows
 tnoremap <C-w> <C-\><C-n><C-w> 
 
 "--------------------------------------------------------------------------------------------------- 
