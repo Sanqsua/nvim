@@ -18,10 +18,10 @@ call plug#end()
 "--------------------------------------------------------------------------------------------------
 "general things
 "---------------------------------------------------------------------------------------------------
-syntax on
-set encoding=UTF-8
+colorscheme ron
+syntax on set encoding=UTF-8
 set wildmenu
-set wildignore=*/target/*,*/node_modules/*,*.lock
+set wildignore=*/target/*,*/node_modules/*,*.lock 
 set smartcase
 set shiftwidth=2	"tabswidth = 2
 set smarttab		"autoindents if tabs are used previously
@@ -38,7 +38,7 @@ let g:netrw_liststyle = 3 	"treestyle
 
 
 "--------------------------------------------------------------------------------------------------- 
-"shortcuts 
+"shortcuts in normal mode
 "---------------------------------------------------------------------------------------------------
 
 "open nettree in current directory
@@ -49,10 +49,10 @@ nnoremap <Leader>s  :%s//gc<Left><Left><Left>
 
 
 "find file
-nnoremap <Leader>f :find 
+nnoremap <Leader>ff :find 
 
 "source this file
-nnoremap <Leader>5 (:source % <return>)
+nnoremap <Leader>fs (:source % <return>)
 
 "change directory to current file
 nnoremap <Leader>cd	:cd %:h <return> 
@@ -62,18 +62,34 @@ nnoremap <Leader>g :grep!
 nnoremap <Leader>w :cw <return>
 
 "ctags if needed
+
+
 nnoremap <Leader>ct <C-]>
 
-tnoremap <C-w> <C-\><C-n><C-w> 
 
-nnoremap <Leader>ö :FZF<return>
+nnoremap <Leader>ö :FZF --preview<return> 
 nnoremap <Leader>ä :term<return>:vsp<return>
 
+"--------------------------------------------------------------------------------------------------- 
+"shortcuts in insert mode
+"---------------------------------------------------------------------------------------------------
 "f d for esc
 inoremap qq <Esc>
 
 inoremap <M-a> <C-o>A
 
+inoremap ä ()<Left>
+inoremap ö {}<Left><Return><C-o>O
+inoremap ü []<Left>
+inoremap Ö \
+
+"--------------------------------------------------------------------------------------------------- 
+"shortcuts in terminal mode
+"---------------------------------------------------------------------------------------------------
+tnoremap <C-w> <C-\><C-n><C-w> 
+
 "--------------------------------------------------------------------------------------------------- 
 " config for plugins
-"---------------------------------------------------------------------------------------------------
+"--------------------------------------- ------------------------------------------------------------
+let g:fzf_preview_window = 'right:60%'
+
