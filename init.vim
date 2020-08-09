@@ -18,7 +18,7 @@ call plug#end()
 source ~/.config/nvim/modules/general_settings.vim
 
 "--------------------------------------------------------------------------------------------------- 
-"shortcuts in normal mode
+"shortcuts and mappings
 "---------------------------------------------------------------------------------------------------
 source ~/.config/nvim/modules/shortcuts.vim
 
