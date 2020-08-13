@@ -35,6 +35,9 @@ nnoremap <Leader>cg <C-]>
 "vertical split scrollbind IMPORTANT
 nnoremap <Leader>fvs gg :windo set noscrollbind<return> :vs<return><c-w>w<c-f> :windo set scrollbind<return> <c-w>w
 
+nnoremap ö /
+nnoremap ä \
+
 "-------------------------------------------------------------------------------------------------- 
 "shortcuts for text editing
 "---------------------------------------------------------------------------------------------------
@@ -43,18 +46,18 @@ nnoremap <Leader>fvs gg :windo set noscrollbind<return> :vs<return><c-w>w<c-f> :
 nnoremap <Leader>s  :%s//gc<Left><Left><Left>
 
 "remap german ae oe ue keys
-inoremap ä ()<Left>
-inoremap ö {}<Left><Return><C-o>O
-inoremap ü []<Left>
-inoremap Ö /
-inoremap Ä \
-inoremap Ü <C-o>A;
+inoremap Ä ()<Left>
+inoremap Ö {}<Left><Return><C-o>O
+inoremap Ü []<Left>
+inoremap ö /
+inoremap ä \
+inoremap ü <C-o>A;
 
 inoremap jj <Esc>
 inoremap <M-a> <C-o>A
 
-cnoremap Ö /
-cnoremap Ä \
+cnoremap ö  /
+cnoremap ä  \
 
 "--------------------------------------------------------------------------------------------------- 
 "shortcuts in terminal mode
@@ -63,5 +66,7 @@ cnoremap Ä \
 "switch terminal windows
 tnoremap <C-w> <C-\><C-n><C-w> 
 " create terminal
-nnoremap <Leader>te :sp+te <Return>i
+nnoremap <Leader>te :vs+te <Return>i
 
+tnoremap ö  /
+tnoremap ä  \
