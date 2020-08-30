@@ -9,7 +9,7 @@ let mapleader =" "
 "---------------------------------------------------------------------------------------------------
 
 "open nettree in current directory
-nnoremap <Leader>d ( :30vs . <return> )
+nnoremap <Leader>d ( :vs . <return> )
 
 "find file
 nnoremap <Leader>ff :find 
@@ -20,6 +20,7 @@ nnoremap <Leader>f5 (:source % <return>)
 
 "change directory to current file
 nnoremap <Leader>cd	:cd %:h <return> 
+
 
 nnoremap <Leader>g :grep! 
 "cw
@@ -34,6 +35,10 @@ nnoremap <Leader>cg <C-]>
 
 "vertical split scrollbind IMPORTANT
 nnoremap <Leader>fvs gg :windo set noscrollbind<return> :vs<return><c-w>w<c-f> :windo set scrollbind<return> <c-w>w
+
+"tab to navigate tabs
+nnoremap <Tab> :tabNext<return>
+nnoremap <S-Tab> :tabprevious<return>
 
 nnoremap ö /
 nnoremap ä \
@@ -60,13 +65,15 @@ cnoremap ö  /
 cnoremap ä  \
 
 "--------------------------------------------------------------------------------------------------- 
-"shortcuts in terminal mode
+"shortcuts for terminal mode
 "---------------------------------------------------------------------------------------------------
 
 "switch terminal windows
 tnoremap <C-w> <C-\><C-n><C-w> 
 " create terminal
-nnoremap <Leader>te :vs+te <Return>i
-
+nnoremap <Leader>tvs :vs+te <Return>i
+nnoremap <Leader>tt :tabnew+te <Return>i
 tnoremap ö  /
 tnoremap ä  \
+
+
