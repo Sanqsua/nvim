@@ -15,5 +15,10 @@ set grepprg=rg\ -S\ --vimgrep
 " to have case insensitive tabbing while in command mode
 set smartcase
 set ignorecase
+
+set hidden
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3 	"treestyle
+
+    
+    
