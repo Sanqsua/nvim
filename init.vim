@@ -1,6 +1,7 @@
 "THIS CONFIGURATION IS FOR GERMAN KEYBOARD LAYOUTS
 "---------------------------------------------------------------------------------------------------
-"vimplugins (vimplug) --------------------------------------------------------------------------------------------------- 
+"vimplugins (vimplug)
+"--------------------------------------------------------------------------------------------------- 
 
 call plug#begin('~/.vim/plugged')
 Plug 'rust-lang/rust.vim'
@@ -8,13 +9,18 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'autozimu/LanguageClient-neovim', {
-     \ 'branch': 'next',
-     \ 'do': 'bash install.sh',
-     \ }
- Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
- call plug#end()
- 
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+call plug#end()
+
+"--------------------------------------------------------------------------------------------------
+"vimcommands on startup
+"---------------------------------------------------------------------------------------------------
+source ~/.config/nvim/modules/vim_startup.vim
 
 "--------------------------------------------------------------------------------------------------
 "general things
@@ -26,19 +32,27 @@ source ~/.config/nvim/modules/general_settings.vim
 "---------------------------------------------------------------------------------------------------
 source ~/.config/nvim/modules/shortcuts.vim
 
+"programming languages
+inoremap <M-f> <Esc>/@\w\+@<return><Esc>cf@
+
+" rust shortcuts and snipplets
+source ~/.config/nvim/modules/rust_shortcuts.vim
+
+
 "--------------------------------------------------------------------------------------------------- 
 " config for plugins
 "--------------------------------------- ------------------------------------------------------------
-let g:fzf_preview_window = 'right:60%'
 
+"fzf
+let g:fzf_preview_window = 'right:60%'
 set hidden
 
+" languageClient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ }
-" note that if you are using Plug mapping you should not use `noremap` mappings.
-nmap <F5> <Plug>(lcn-menu)
-" Or map each action separately
-nmap <silent>K <Plug>(lcn-hover)
-nmap <silent> gd <Plug>(lcn-definition)
-nmap <silent> <F2> <Plug>(lcn-rename)
+
+" limelight 
+" " Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_default_coefficient = 0.7
