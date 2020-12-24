@@ -23,7 +23,7 @@ nnoremap <Leader>fr (:e! % <return>)
 "change directory to current file
 nnoremap <Leader>cd	:cd %:h <return> 
 
-
+" grep
 nnoremap <Leader>g :grep! 
 nnoremap <Leader>cw :cw <return> 
 
@@ -38,6 +38,8 @@ nnoremap <Leader>cg <C-]>
 
 nnoremap ö /
 nnoremap ä \
+
+nnoremap <leader>w <C-w>
 
 "-------------------------------------------------------------------------------------------------- 
 "shortcuts for text editing
