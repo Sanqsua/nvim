@@ -3,7 +3,7 @@
 autocmd FileType rust nmap <F5> <Plug>(lcn-menu)
 " Or map each action separately
 autocmd FileType rust nmap <silent>K <Plug>(lcn-hover)
-autocmd FileType rust nmap <silent> gd <Plug>(lcn-definition) :sp <return> <C-o>
+autocmd FileType rust nmap <silent> gd <Plug>(lcn-definition) 
 autocmd FileType rust nmap <silent> <F2> <Plug>(lcn-rename)
 
 " Function

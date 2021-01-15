@@ -11,7 +11,6 @@ set shiftwidth=2	"tabswidth = 2
 set smarttab		"autoindents if tabs are used previously
 set tabstop=2
 set nu 
-"set path+=**
 set path=.,,,**
 set grepprg=rg\ -S\ --vimgrep 
 " to have case insensitive tabbing while in command mode
