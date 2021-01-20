@@ -6,11 +6,12 @@
 if !filereadable(system('echo  -n "$HOME/.local/share/nvim/site/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim_plug to manage plugins"
 	silent !mkdir -p $HOME/.local/share/nvim/site/autoload/
+	silent !mkdir -p $HOME/.local/share/nvim/site/autoload/plugged
 	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > $HOME/.local/share/nvim/site/autoload/plug.vim
 	autocmd VimEnter * PlugInstall
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$HOME/.local/share/nvim/site/autoload/plugged')
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
