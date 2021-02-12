@@ -57,7 +57,6 @@ inoremap Ü []<Left>
 inoremap Ü []<Left>
 inoremap ö /
 inoremap ä \
-inoremap ü <C-o>A;
 inoremap jj <Esc>
 inoremap <M-a> <C-o>A
 

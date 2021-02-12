@@ -16,14 +16,15 @@ Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'dhruvasagar/vim-table-mode'
+Plug 'rafcamlet/nvim-whid'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'mattn/emmet-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'yuezk/vim-js'
 call plug#end()
 
 "--------------------------------------------------------------------------------------------------
@@ -59,6 +60,7 @@ set hidden
 " languageClient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+		\ 'javascript': ['~/.nvm/versions/node/v12.20.0/bin/typescript-language-server'],
     \ }
 
 " limelight 
