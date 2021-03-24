@@ -5,6 +5,9 @@ autocmd FileType rust nmap <F5> <Plug>(lcn-menu)
 autocmd FileType rust nmap <silent>K <Plug>(lcn-hover)
 autocmd FileType rust nmap <silent> gd <Plug>(lcn-definition) 
 autocmd FileType rust nmap <silent> <F2> <Plug>(lcn-rename)
+autocmd FileType rust nmap <silent> <F3> <Esc>:call LanguageClient#textDocument_codeAction()<return> 
+autocmd FileType rust nmap <silent> <F4> <Esc>:call LanguageClient#explainErrorAtPoint()<return>
+
 
 " Function
 autocmd FileType rust inoremap ücf fn<space>@name@(@parameters@)@return@{}<left><return><Esc>O@your_code@<Esc>kI

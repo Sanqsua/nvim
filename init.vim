@@ -2,7 +2,7 @@
 "---------------------------------------------------------------------------------------------------
 "vimplugins (vimplug)
 "--------------------------------------------------------------------------------------------------- 
-
+" download vim_plug and plugins automatically if they are not provided
 if !filereadable(system('echo  -n "$HOME/.local/share/nvim/site/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim_plug to manage plugins"
 	silent !mkdir -p $HOME/.local/share/nvim/site/autoload/
@@ -13,6 +13,7 @@ endif
 
 call plug#begin('$HOME/.local/share/nvim/site/autoload/plugged')
 Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -23,8 +24,9 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'rafcamlet/nvim-whid'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mattn/emmet-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'yuezk/vim-js'
+
+"colors:
+"
 call plug#end()
 
 "--------------------------------------------------------------------------------------------------
@@ -61,6 +63,7 @@ set hidden
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
 		\ 'javascript': ['~/.nvm/versions/node/v12.20.0/bin/typescript-language-server'],
+		\'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
     \ }
 
 " limelight 
