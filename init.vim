@@ -14,6 +14,7 @@ endif
 call plug#begin('$HOME/.local/share/nvim/site/autoload/plugged')
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -25,8 +26,9 @@ Plug 'rafcamlet/nvim-whid'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mattn/emmet-vim'
 
-"colors:
-"
+
+"look:
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "--------------------------------------------------------------------------------------------------
