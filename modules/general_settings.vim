@@ -7,9 +7,9 @@ set encoding=UTF-8
 set wildmenu
 set wildignore=*/target/*,*/node_modules/*,*.lock 
 set smartcase
-set shiftwidth=2	"tabswidth = 2
+set shiftwidth=4	"tabswidth = 2
 set smarttab		"autoindents if tabs are used previously
-set tabstop=2
+set tabstop=4
 set nu 
 set path=.,,,**
 set grepprg=rg\ -S\ --vimgrep 

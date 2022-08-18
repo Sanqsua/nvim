@@ -28,7 +28,7 @@ nnoremap <Leader>g :grep!
 nnoremap <Leader>cw :cw <return> 
 
 "/FZF stuff 
-nnoremap <Leader>fz :Files<Return> 
+nnoremap <Leader>fz :Files .<Return> 
 nnoremap <Leader>ct :!ctags -R .  
 nnoremap <Leader>cg <C-]> 
 

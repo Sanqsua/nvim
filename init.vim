@@ -46,7 +46,7 @@ source ~/.config/nvim/modules/general_settings.vim
 "---------------------------------------------------------------------------------------------------
 source ~/.config/nvim/modules/shortcuts.vim
 
-"programming languages
+"programming languages snipplets removal
 inoremap <M-f> <Esc>/@\w\+@<return><Esc>cf@
 
 " rust shortcuts and snipplets
